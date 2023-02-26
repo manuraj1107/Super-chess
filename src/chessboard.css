@@ -1,0 +1,52 @@
+.chessboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 540px;
+    height: 540px;
+    border: 1px solid black;
+  }
+  
+  .cell {
+    width: 67.5px;
+    height: 67.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  
+  }
+
+  .cell.white{
+    background-color: var(--white-cell);
+  } 
+
+  .cell.black{
+    background-color: var(--black-cell);
+  }
+
+  .cell:hover{
+    width: 67px;
+    height: 67px;
+  }
+
+  .cell.selected {
+    background-color: red;
+
+  }
+
+  .cell.highlighted{
+    background-color: lawngreen;
+  }
+  
+  .cell:hover:not(.selected){
+    background-color: var(--bg-dark);
+    cursor: pointer;
+  }
+
+  .cell:focus:not(.selected) {
+    outline: none;
+    box-shadow: 0 0 0 2px black;
+  }
+
+
+  
